@@ -18,7 +18,7 @@ public class AgeValidator implements ConstraintValidator<AgeConstraint, Integer>
     @Override
     public boolean isValid(Integer age, ConstraintValidatorContext context) {
         if (age == null) {
-            return true; // Let @NotNull handle null values
+            return true;
         }
 
         LocalDate today = LocalDate.now();

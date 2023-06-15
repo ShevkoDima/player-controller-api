@@ -13,8 +13,6 @@ public class PlayerServiceImp implements PlayerService {
 
     @Override
     public boolean deleteUserById(Integer id) {
-        // Logic to delete the user with the specified ID
-        // You can use your UserRepository or any other data access mechanism
         playersList = new PlayersList();
         Optional<Player> optionalPlayer = playersList.findById(id);
         if (optionalPlayer.isPresent()) {

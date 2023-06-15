@@ -10,14 +10,10 @@ public class UniqueLoginValidator implements ConstraintValidator<UniqueLogin, St
 
     @Override
     public void initialize(UniqueLogin constraintAnnotation) {
-        // Initialization if needed
     }
 
     @Override
     public boolean isValid(String login, ConstraintValidatorContext context) {
-        // Add your logic to check if the login is unique
-        // You can use a service or repository to perform the uniqueness check
-        // For simplicity, let's assume a static list of logins
 
         List<String> existingLogins = Arrays.asList("firstPlayer", "secondPlayer", "thirdPlayer");
 

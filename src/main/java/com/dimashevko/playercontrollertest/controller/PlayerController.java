@@ -41,7 +41,6 @@ public class PlayerController {
     @PostMapping("/player/create")
     public ResponseEntity<?> createPlayer(@Valid @RequestBody final Player player, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            // Validation errors occurred
             List<String> errorMessages = new ArrayList<>();
 
             for (FieldError error : bindingResult.getFieldErrors()) {
@@ -72,7 +71,6 @@ public class PlayerController {
             throw new PlayerNotFoundException();
         }
         if (bindingResult.hasErrors()) {
-            // Validation errors occurred
             List<String> errorMessages1 = new ArrayList<>();
 
             for (FieldError error : bindingResult.getFieldErrors()) {
